@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-opay-primary: #00d09c;
+  --color-opay-blue: #1b1259;
+
+  /* Custom Animations */
+  --animate-slide-up: slide-up 0.8s ease-out forwards;
+  --animate-reveal-up: reveal-up 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  --animate-slide-right: slide-right 1s ease-out forwards;
+  --animate-bounce-slow: bounce-slow 3s infinite;
+
+  /* Keyframes with GPU acceleration */
+  @keyframes slide-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) translateZ(0);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0) translateZ(0);
+    }
+  }
+
+  @keyframes reveal-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px) scale(0.98) translateZ(0);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1) translateZ(0);
+    }
+  }
+
+  @keyframes slide-right {
+    0% {
+      opacity: 0;
+      transform: translateX(30px) translateZ(0);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0) translateZ(0);
+    }
+  }
+
+  @keyframes bounce-slow {
+
+    0%,
+    100% {
+      transform: translateY(-3%) translateZ(0);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+}
+
+/* Staggered delays */
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-700 {
+  animation-delay: 700ms;
+}
+
+/* FIXED UTILITIES: 
+   We define these as raw CSS so Tailwind doesn't throw a 'Cannot apply unknown utility' error.
+*/
+.tap-highlight-none {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.touch-button {
+  /* Only @apply built-in Tailwind classes */
+  @apply active:scale-95 transition-transform select-none;
+  /* Add the custom property manually */
+  -webkit-tap-highlight-color: transparent;
+}
