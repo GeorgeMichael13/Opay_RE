@@ -2,6 +2,9 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ServicesSection from "@/components/Services";
 import FeaturesGrid from "@/components/FeaturesGrid";
+import CustomerTestimonials from "@/components/CustomerTestimonials";
+import SecuritySection from "@/components/SecuritySection"
+import SatisfactionSection from "@/components/SatisfactionSection";
 export default function Home() {
   return (
     <>
@@ -18,6 +21,22 @@ export default function Home() {
         {/* Feature Highlights */}
         <section className="bg-white">
           <FeaturesGrid />
+        </section>
+
+         {/* Social Proof */}
+        <section className="bg-[#f8f9fa]">
+          <CustomerTestimonials />
+        </section>
+
+
+        {/* Trust & Security: Critical for Fintech */}
+        <section className="bg-white">
+          <SecuritySection />
+        </section>
+
+         {/* Customer Success */}
+        <section className="bg-white">
+          <SatisfactionSection />
         </section>
         </main>
     </>
