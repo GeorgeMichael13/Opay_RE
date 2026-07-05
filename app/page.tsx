@@ -5,6 +5,8 @@ import FeaturesGrid from "@/components/FeaturesGrid";
 import CustomerTestimonials from "@/components/CustomerTestimonials";
 import SecuritySection from "@/components/SecuritySection"
 import SatisfactionSection from "@/components/SatisfactionSection";
+import CinematicTimelineSection from "@/components/CinematicTimelineSection";
+import MainFooter from "@/components/MainFooter";
 export default function Home() {
   return (
     <>
@@ -38,7 +40,13 @@ export default function Home() {
         <section className="bg-white">
           <SatisfactionSection />
         </section>
+
+         {/* Brand Story / Visual Timeline */}
+        <section className="relative overflow-hidden">
+          <CinematicTimelineSection />
+        </section>
         </main>
+        <MainFooter />
     </>
   );
 }
