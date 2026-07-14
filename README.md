@@ -70,10 +70,6 @@ Project Structure
 app/
 components/
 public/
-lib/
-styles/
-
-
 
 About Me
 
